@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace xmlReaderSample
 {
@@ -14,7 +15,13 @@ namespace xmlReaderSample
         [STAThread]
         static void Main()
         {
-            reader.Read("eurofxref-daily.xml");
+            string path = Directory.GetCurrentDirectory();
+
+            XmlSchemaSetExample.TestAgainstSchema();
+            //xmlDocument.Read(path, "eurofxref-daily.xml");
+            
+            //reader.Read(path,"eurofxref-daily.xml");
+            
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Form1());

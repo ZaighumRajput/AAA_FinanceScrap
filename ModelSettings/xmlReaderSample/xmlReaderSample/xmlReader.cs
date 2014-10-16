@@ -6,11 +6,13 @@ namespace xmlReaderSample
 {
     class reader
     {
-        public static void Read(string fileName)
+        public static void Read(string path, string fileName)
         {
-            string path = Directory.GetCurrentDirectory()  ;
+            
             string fullPathName = System.IO.Path.Combine(path, fileName);
             XmlReader xmlReader = XmlReader.Create(fullPathName);
+            
+            
             while (xmlReader.Read())
             {
                  if((xmlReader.NodeType == XmlNodeType.Element) && (xmlReader.Name == "Cube"))
