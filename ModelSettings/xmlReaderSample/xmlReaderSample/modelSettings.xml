@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModelSettings xmlns:xsi="modelSettings.xsd">
+  <equity name="SPX">
+    <BlackScholes>
+      <LastLiquidPoint value="5Y"/>
+    </BlackScholes>
+  </equity>
+  
+  <equity name="AEX">
+    <MJD>
+      <Jump initialGuess="0.1" upperBound = "1" lowerBound = "0"/>
+	    <JumpMean initialGuess="0.1" upperBound = "1" lowerBound = "0"/>
+    </MJD>
+  </equity>
+</ModelSettings>

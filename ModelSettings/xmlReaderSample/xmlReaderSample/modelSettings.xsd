@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="ModelSettings">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" name="equity">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="MJD">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="Jump">
+                      <xs:complexType>
+                        <xs:attribute name="initialGuess" type="xs:decimal" use="required" />
+                        <xs:attribute name="upperBound" type="xs:unsignedByte" use="required" />
+                        <xs:attribute name="lowerBound" type="xs:unsignedByte" use="required" />
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="JumpMean">
+                      <xs:complexType>
+                        <xs:attribute name="initialGuess" type="xs:decimal" use="required" />
+                        <xs:attribute name="upperBound" type="xs:unsignedByte" use="required" />
+                        <xs:attribute name="lowerBound" type="xs:unsignedByte" use="required" />
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element minOccurs="0" name="BlackScholes">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="LastLiquidPoint">
+                      <xs:complexType>
+                        <xs:attribute name="value" type="xs:string" use="required" />
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+            <xs:attribute name="name" type="xs:string" use="required" />
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -17,6 +17,7 @@ namespace xmlReaderSample
         {
             string path = Directory.GetCurrentDirectory();
 
+            xDocumentExample.Read(path, "modelSettings.xml");
             XmlSchemaSetExample.TestAgainstSchema();
             //xmlDocument.Read(path, "eurofxref-daily.xml");
             
